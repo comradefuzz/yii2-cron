@@ -9,6 +9,10 @@
 namespace ladno\yii2cron;
 
 
+use Cron\Cron;
+use Cron\Executor\Executor;
+use Cron\Resolver\ArrayResolver;
+use Cron\Schedule\CrontabSchedule;
 use yii\console\Controller;
 
 /**
@@ -30,17 +34,17 @@ class CronController extends Controller
      */
     public function actionIndex()
     {
-        $resolver = new \Cron\Resolver\ArrayResolver();
+        $resolver = new ArrayResolver();
 
         foreach ($this->crontab as $cronJob) {
-            $job = new \Cron\Job\ShellJob();
+            $job = new ShellJob();
             $job->setCommand($cronJob[1]);
-            $job->setSchedule(new \Cron\Schedule\CrontabSchedule($cronJob[0]));
+            $job->setSchedule(new CrontabSchedule($cronJob[0]));
             $resolver->addJob($job);
         }
 
-        $cron = new \Cron\Cron();
-        $cron->setExecutor(new \Cron\Executor\Executor());
+        $cron = new Cron();
+        $cron->setExecutor(new Executor());
         $cron->setResolver($resolver);
 
         $cron->run();
