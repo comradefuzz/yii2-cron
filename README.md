@@ -32,7 +32,7 @@ Add cron console controller to your config and define your jobs  :
             'cron' => [
                 'class' => 'ladno\yii2cron\CronController',
                 'crontab' => [
-                    ['* * * * *',  'yii help'],
+                    ['* * * * *',  'yii app/my-useful-action'],
                     ['* * * * *',  'echo "ONE MORE"'],
                     ['*/5 * * * *',  'echo "Not so fast"'],
                 ],
