@@ -1,6 +1,6 @@
 {
     "name": "ladno/yii2-cron",
-    "description": "Allows define and execute cronjobs in Yii2 application",
+    "description": "Allows to define and execute cronjobs in Yii2 application",
     "type": "yii2-extension",
     "keywords": ["yii2","extension","cron"],
     "license": "BSD-3-Clause",
