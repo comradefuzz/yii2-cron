@@ -25,7 +25,26 @@ to the require section of your `composer.json` file.
 Usage
 -----
 
-Once the extension is installed, simply use it in your code by  :
+Add cron console controller to your config and define your jobs  :
 
 ```php
-<?= \ladno\yii2cron\AutoloadExample::widget(); ?>```
+    'controllerMap' => [
+            'cron' => [
+                'class' => 'ladno\yii2cron\CronController',
+                'crontab' => [
+                    ['* * * * *',  'yii help'],
+                    ['* * * * *',  'echo "ONE MORE"'],
+                    ['*/5 * * * *',  'echo "Not so fast"'],
+                ],
+                'log' => true, // Enables logging (default `false`)
+                'logCategory' => 'crontab', // Log category (default `crontab`)
+            ],
+        ]
+```
+        
+        
+Then configure your server crontab:
+
+```bash
+* * * * * /path/to/yii cron > /dev/null 2>&1
+```
