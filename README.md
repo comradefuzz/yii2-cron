@@ -1,6 +1,6 @@
 Yii2 cron extension
 ===================
-Allows define and execute cronjobs in Yii2 application
+Allows to define and execute cronjobs in Yii2 application
 
 Installation
 ------------
