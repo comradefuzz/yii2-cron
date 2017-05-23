@@ -10,13 +10,13 @@ The preferred way to install this extension is through [composer](http://getcomp
 Either run
 
 ```
-php composer.phar require --prefer-dist ladno/yii2-cron "*"
+php composer.phar require --prefer-dist comradefuzz/yii2-cron "*"
 ```
 
 or add
 
 ```
-"ladno/yii2-cron": "*"
+"comradefuzz/yii2-cron": "*"
 ```
 
 to the require section of your `composer.json` file.
@@ -30,7 +30,8 @@ Add cron console controller to your config and define your jobs  :
 ```php
     'controllerMap' => [
             'cron' => [
-                'class' => 'ladno\yii2cron\CronController',
+                'class' => 'comradefuzz
+                \yii2cron\CronController',
                 'crontab' => [
                     ['* * * * *',  'yii app/my-useful-action'],
                     ['* * * * *',  'echo "ONE MORE"'],
