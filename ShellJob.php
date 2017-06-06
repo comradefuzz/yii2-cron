@@ -6,7 +6,7 @@
  * Time: 15:43
  */
 
-namespace ladno\yii2cron;
+namespace comradefuzz\yii2cron;
 
 
 use Cron\Report\JobReport;
