@@ -1,5 +1,5 @@
 {
-    "name": "ladno/yii2-cron",
+    "name": "comradefuzz/yii2-cron",
     "description": "Allows to define and execute cronjobs in Yii2 application",
     "type": "yii2-extension",
     "keywords": ["yii2","extension","cron"],
@@ -16,7 +16,7 @@
     },
     "autoload": {
         "psr-4": {
-            "ladno\\yii2cron\\": ""
+            "comradefuzz\\yii2cron\\": ""
         }
     }
 }
