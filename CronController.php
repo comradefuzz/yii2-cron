@@ -6,7 +6,7 @@
  * Time: 19:24
  */
 
-namespace ladno\yii2cron;
+namespace comradefuzz\yii2cron;
 
 
 use Cron\Cron;
